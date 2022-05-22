@@ -37,11 +37,11 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run:
-          command: az webapp deployment source show --resource-group DemoApp --name dotnet-core-sample
+          command: az webapp deployment source show --resource-group DemoApp --name dnet-core-sample
       - run:
           name: "Deploy Web App to Azure"
           command: |
-            az webapp deployment source config-local-git --resource-group DemoApp --name dotnet-core-sample
+            az webapp deployment source config-local-git --resource-group DemoApp --name dnet-core-sample
             cd ~/project/WebAPIFolder/
             git init
             git config --global user.email "yemiwebby@gmail.com"
